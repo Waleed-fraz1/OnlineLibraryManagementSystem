@@ -21,7 +21,8 @@ const Home = () => {
     <SideBar isSideBarOpen={isSideBarOpen} setIsSideOpen={setIsSideBarOpen} setSelectedComponent={setSelectedComponent} />
   </div>
 
-  </>;
+  </>
+  )
 };
 
 export default Home;
