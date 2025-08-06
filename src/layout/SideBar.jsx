@@ -8,6 +8,7 @@ import catalogIcon from "../assets/catalog.png";
 import settingIcon from "../assets/setting-white.png";
 import usersIcon from "../assets/people.png";
 import { RiAdminFill } from "react-icons/ri";
+import { toggleAddNewAdminPopup } from "../store/slices/popUpSlice";
 
 const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
               <button
                 onClick={() => dispatch(toggleAddNewAdminPopup())}
                 className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
+                onClickCapture={()=>dispatch(toggleAddNewAdminPopup())}
               >
                 <RiAdminFill className="w-6 h-6" /> <span>Add New Admin</span>
               </button>
